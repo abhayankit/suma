@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+        *{margin: 0;padding: 0; box-sizing: border-box;}
+        body,html
+        {
+            width: 100%;
+            height: 100%;
+        }
+nav
+{
+    width: 100%;
+    height: 80px;
+    background-color: royalblue;
+    position: fixed;
+}
+.logo
+{
+    
+    width: 140px;
+    font-size: 30px;
+    margin: 20px 50px;
+}
+.fa-circle-xmark
+{
+    float: right;
+    line-height: 80px;
+    margin-right: 10px;
+    font-size: 25px;
+    display: none;
+}
+.fa-bars{
+    float: right;
+    line-height: 80px;
+    margin-right: 10px;
+    font-size: 25px;
+    display: none;
+}
+nav ul
+{
+    float: right;
+    list-style: none;
+}
+nav ul li
+{
+    display: inline-block;
+    line-height: 80px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 8px 20px;
+}
+nav ul li a.active,a:hover
+{
+    background-color: #2b00ff;
+    border-radius: 4px;
+}
+
+/*--------home---------*/
+#home
+{
+    width: 100%;
+    height: 550px;
+}
+.images
+{
+    width: 75%;
+    height: 580px;
+    float: left;
+}
+.aside
+{
+    float: right;
+    background-color:lightcoral;
+    width: 25%;
+    height: 580px;
+    color: white;
+    
+
+}
+button
+{
+    width: fit-content;
+    display: block;
+    margin-top: 150px;
+    margin-left: 50px;
+    border: 2px solid greenyellow;
+    border-radius: 8px;
+    padding: 15px 50px;
+    transition: background 0.5s;
+}
+button a
+{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+button:hover
+{
+    background: lightgreen;
+    
+}
+.work
+{
+    text-transform: capitalize;
+    font-size: 40px;
+    margin: 50px auto;
+    padding: 30px 10px;
+}
+/*------------some----------*/
+.text
+{
+    font-size: 50px;
+    text-align: center;
+    text-transform: capitalize;
+    color: orangered;
+    padding: 10px 50px;
+}
+p
+{
+    font-size: 25px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 10px 50px;
+
+}
+.box
+{
+    padding: 10px 50px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn
+{
+    /* width: 20%; */
+    height: 150px;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 2px transparent;
+    text-align: center;
+    transition: background 0.5s,transform;
+}
+.btn a
+{
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    position: relative;
+    top: 25px;
+}
+.btn:hover
+{
+    background:rgb(221, 5, 18);
+    transform: translateY(-10px);
+}
+/*-----------about us--------*/
+#about
+{
+    width: 90%;
+    height: 500px;
+    margin: 5% auto;
+}
+.pic
+{
+    width: 40%;
+    height: 400px;
+    float: left;
+    border-radius: 10px;
+}
+.about-text
+{
+    width: 50%;
+    height: 500px;
+    float: right;
+}
+.transp
+{
+    text-transform:uppercase;
+    color:#ff004f;
+    margin: 10px;
+}
+.us
+{
+    text-transform:capitalize;
+    padding: 0px 20px;
+}
+p
+{
+    text-align: justify;
+    font-size: 18px;
+    padding: 20px 20px;
+}
+.learn
+{
+    position: relative;
+    top: 50px;
+    width: fit-content;
+    border-radius: 0px 8px 0px 8px;
+    border: 1px solid;
+    padding: 10px 25px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: background .5s;
+    box-shadow: 1px 2px 1px 1px;
+    
+}
+.learn:hover
+{
+    background: #ff004f;
+}
+/*----------services---------*/
+.our
+{
+    text-align: center;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+.service-list
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.list
+{
+    margin: 10px;
+    box-shadow:1px 0px 10px 0px red;
+    border-radius: 10px;
+    transition: background 0.5s;
+}
+.list:hover
+{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+h2
+{
+    text-align: center;
+    text-transform: capitalize;
+}
+.serv
+{
+    width:100%;
+    height: 200px;
+}
+.list p
+{
+    text-align: center;
+}
+/*----------------gallery----------*/
+.ours
+{
+    text-align: center;
+    margin: 20px auto;
+    text-transform: capitalize;
+}
+.achivement
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.achive
+{
+    margin: 10px;
+    box-shadow:1px 0px 10px 0px red;
+    text-align: center;
+    transition: background 0.5s;
+}
+.pro
+{
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+
+}
+.all
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.second
+{
+    margin: 10px;
+    box-shadow:1px 0px 10px 0px red;
+    text-align: center;
+    transition: background 0.5s;
+}
+.sec
+{
+    width: 100%;
+    height: 200px;
+}
+/*-------contact------*/
+#contact
+{
+    color: #fff;
+    background-color:#ff004f;
+    
+}
+.row
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.left
+{
+    flex-basis: 50%;
+}
+.right
+{
+    flex-basis: 50%;
+
+}
+form
+{
+    width:400px;
+    height: 300px;
+    box-shadow:1px 0px 10px 0px white;
+    border-radius: 8px;
+    margin: 20px auto;
+}
+form input
+{
+    background: #262626;
+    position: relative;
+    top: 50px;
+    left: 5px;
+    margin:5px 5px;
+    color: #fff;
+    border-radius: 6px;
+}
+textarea
+{
+    width: 100%;
+    background: #262626;
+    position: relative;
+    /* padding: 10px 5px; */
+    top: 80px;
+}
+.sub
+{
+    background: #262626;
+    position: relative;
+    left: 80px;
+    bottom: 50px;
+}
+.cont
+{
+    font-size: 16px;
+    padding: 10px 20px;
+}
+.cont i
+{
+    font-size: 25px;
+    padding: 0px 10px;
+}
+.icons a i
+{
+    font-size: 30px;
+    padding: 5px 10px;
+    position: relative;
+    left: 20px;
+
+}
+/*-----------footer-------*/
+#footer
+{
+    background-color: #262626;
+    width: 100%;
+    height: 10vh;
+}
+.f{
+    text-align: center;
+    font-weight: 300;
+    color: #fff;
+
+}
+/*------------small screen------------*/
+@media only screen and (max-width:600px) {
+    .fa-solid
+    {
+        display: block;
+        font-size: 25px;
+    }
+    .fa-bars
+    {
+        display: block;
+        font-size: 25px;
+
+    }
+    nav ul .fa-solid
+    {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    nav ul .fa-circle-xmark
+    {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    nav ul
+    {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        height: 100%;
+        padding-top: 50px;
+        z-index: 2;
+    }
+    nav ul li
+    {
+        display: block;
+        text-align: center;
+
+    }
+    .images
+    {
+        width: 100%;
+
+    }
+    .aside
+    {
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+    }
+    .some.text,p
+    {
+        font-size: 18px;
+    }
+    .about-text
+    {
+        font-size: 16px;
+    }
+    .btn
+    {
+        width: 100%;
+        font-size: 12px;
+
+    }
+    .about-text
+    {
+        width: 100%;
+    }
+    .pic
+    {
+        width: 100%;
+    }
+    .our
+    {
+        font-size: 18px;
+    }
+    .service-list
+    {
+        width: 100%;
+        flex-direction: column;
+        font-size: 14px;
+    }
+    .achivement
+    {
+        width: 100%;
+        flex-direction: column;
+        font-size: 14px;
+    }
+    .all
+    {
+        width: 100%;
+        flex-direction: column;
+        font-size: 14px;
+
+    }
+    .row
+    {
+        width: 100%;
+        flex-direction: column;
+        font-size: 14px;
+
+    }
+    .copy
+    {
+        font-size: 16px;
+    }
+
+}
+
+    </style>
+
+</head>
+<body>
+    <nav>
+        <img src="logo/logo.png" class="logo">
+        
+        <ul id="sidemenu">
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about us</a></li>
+            <li><a href="#service">services</a></li>
+            <li><a href="#gallery">gallery</a></li>
+            <li><a href="#contact">contact</a></li>
+            <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <!------home------>
+    <div id="home">
+        <img src="images/image 3.jpg" class="images">
+        <div class="aside">
+            <h1 class="work"> we are work for helping people .</h1>
+        <button> <a href="#">donate</a></button>
+        </div>
+    </div>
+    <!----something----->
+    <div class="some">
+        <h1 class="text">12A & 80G certified ngo</h1>
+        <p>donate us for a good cause and claim 50% tax exemption under section 80G of income tax act.</p>
+        <div class="box">
+            <div class="btn"><a href="#">save the enviroment</a></div>
+            <div class="btn"><a href="#">awareness  program</a></div>
+            <div class="btn"><a href="#">women  empowerment</a></div>
+            <div class="btn"><a href="#">vocational traning</a></div>
+        </div>
+        <div class="box">
+            <div class="btn"><a href="#">skill development</a></div>
+            <div class="btn"><a href="#">child education</a></div>
+            <div class="btn"><a href="#">reaserch and development</a></div>
+            <div class="btn"><a href="#">health and <br> nutrition</a></div>
+        </div>
+    </div>
+    <!------about us -------->
+    <div id="about">
+        <img src="images/image 1.jpg" class="pic">
+        <div class="about-text">
+            <h3 class="transp"> about us</h3>
+            <h1 class="us">about us</h1>
+            <p>Suma Blessing Foundation was established in May 2021 in Delhi, the capital city of India. It is a Non - Profit organization that works for the development of our country. It was founded by Basant Jena, a young Businessman & Entrepreneur.
+            </p>
+            <p>The motive of this foundation is for the development of the country in various segments like in the field of Research and Development (R&D), Education, Health & Nutrition, Skill Development, Rural Development, Environmental, Women Empowerment, Religious Activities, etc.
+            </p>
+            <a href="#" class="learn">learn more</a>
+
+        </div>
+    </div>
+    <!-----services------->
+    <div id="service">
+        <div class="container">
+            <h1 class="our">our service</h1>
+
+            <div class="service-list">
+                <div class="list">
+                    <img src="images/image 1.jpg" class="serv">
+                    <h2>will work for food</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aut rerum commodi officiis dignissimos repellat voluptatibus quod id molestiae iusto!</p>
+                </div>
+                <div class="list">
+                    <img src="images/image 5.jpg"class="serv">
+                    <h2>staff</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus distinctio ex temporibus? Dolorum quas dolor modi reprehenderit saepe impedit quos!</p>
+                </div>
+                <div class="list">
+                    <img src="images/image 3.jpg"class="serv">
+                    <h2>distributing prasad</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa animi, ducimus ut modi veniam quas tempore corporis amet maiores odio?</p>
+                </div>
+                <div class="list">
+                    <img src="images/image 4.jpg"class="serv">
+                    <h2>volunteer</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum odio, dolore vero iste perspiciatis laudantium tempora ducimus esse. Esse, dicta!</p>
+                </div>
+            </div>
+    </div>
+    <!---------gallery---------->
+    <div id="gallery">
+        <div class="our-achivement">
+            <h1 class="ours">gallery</h1>
+            <div class="achivement">
+                <div class="achive">
+                    <img src="gaalery/gallery (4).jpg" class="pro">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.Nostrum, maiores.
+                    </div>
+                <div class="achive">
+                    <img src="gaalery/gallery (1).jpg" class="pro">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, ut!
+                    </div>
+                <div class="achive">
+                    <img src="gaalery/gallery (3).jpg" class="pro">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, nostrum.
+                </div>
+                <div class="achive">
+                    <img src="gaalery/gallery (2).jpg" class="pro">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eos!
+                </div>
+                <div class="achive">
+                    <img src="gaalery/gallery (6).jpg" class="pro">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, harum?
+                </div>
+                
+        </div>
+    </div>
+<div class="all">
+    <div class="second">
+        <img src="gaalery/gallery (5).jpg" class="sec">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, labore.
+    </div>
+    <div class="second">
+        <img src="gaalery/gallery (7).jpg" class="sec">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?
+    </div>
+    
+    <div class="second">
+        <img src="gaalery/gallery (8).jpg" class="sec">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, eaque?
+    </div>
+    <div class="second">
+        <img src="gaalery/gallery (9).jpg" class="sec">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, quos?
+
+    </div>
+    <div class="second">
+        <img src="gaalery/gallery (10).jpg" class="sec">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quidem.
+    </div>
+</div>
+
+    <!------contact------->
+    <div id="contact">
+        <div class="contact-conatainer">
+            <div class="row">
+                <div class="left">
+                    <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Enter Your Email" required>
+                            <textarea name="message"rows="3" placeholder="Your Message"></textarea>
+                            <button type="submit" class="sub">Submit</button>
+                    </form>
+                <p class="cont">contact no. :<i class="fa-solid fa-phone-volume"></i>+916287221693</p>
+                <p class="cont">email id : <i class="fa-solid fa-envelope"></i>  abhaysah022@gmail.com</p>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="tel:+916287221693"><i class="fa-brands fa-square-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7004.6809456501815!2d77.05890341077723!3d28.61955615309178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04d088f7ac93%3A0x1db406bd94cf6e8e!2sUttam%20Nagar%20East%2C%20Uttam%20Nagar%2C%20Delhi%2C%20110059!5e0!3m2!1sen!2sin!4v1709326174606!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------footer------>
+    <div id="footer">
+        <div class="copy">
+            <p class="f">Copyright &copy Develop By Abhay.<i class="fa-solid fa-heart"></i></p>
+
+        </div>
+    </div>
+<!----------javaScript-->
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right ="0";
+    }
+    function closemenu(){
+        sidemenu.style.right ="-200px";
+    }
+</script>
+</body>
+</html>
